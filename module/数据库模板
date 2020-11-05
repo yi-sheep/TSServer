@@ -1,0 +1,15 @@
+数据库模块模板
+const {Model,DataTypes} = {...require('sequelize')}; // 导入sequelize库中的Model，DataTypes
+// 导出模块
+module.exports = (sequelize)=>{ // 接收一个数据库对象参数
+    class /*Name*/ extends Model{} // 创建数据库类
+    /*Name*/.init({ // 初始化类，定义字段属性
+        /*Name*/:{
+            type:DataTypes.STRING
+        },
+        /*Name*/:{
+            type:DataTypes.INTEGER
+        }
+    },{sequelize});
+    return /*Name*/; // 将数据库类返回导出
+}

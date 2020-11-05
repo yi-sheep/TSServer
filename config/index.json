@@ -1,0 +1,19 @@
+{
+    "mysqlConfig":{
+        "host":"127.0.0.1",
+        "username":"gxl",
+        "password":"gxl123",
+        "database":"TS",
+        "dialect":"mysql"
+    },
+    "server":{
+        "host":"150.158.164.225"
+    },
+    "tokenkey":"gxlsheep",
+    "imagesPath":"C:/phpstudy_pro/WWW/image/data/images",
+    "imagesUri":"/图廊/data/images",
+    "portraitPath":"C:/phpstudy_pro/WWW/image/data/user",
+    "portraitUri":"/图廊/data/user",
+    "thumbnailPath":"C:/phpstudy_pro/WWW/image/data/thumbnail",
+    "thumbnailUri":"/图廊/data/thumbnail"
+}
