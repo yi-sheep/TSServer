@@ -66,7 +66,7 @@ router.post('/addUser', async (req, res) => {
         password
       });
       // 创建一条空的用户信息数据
-      let userinfo = await db.UserInformation.create({});
+      let userinfo = await db.UserInformation.create({name:account});
       // 创建一条空的用户关系数据
       let userrelat = await db.UserRelationship.create({});
       userinfo.setUser(user); // 设置外键的值为账户数据的id

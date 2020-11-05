@@ -23,6 +23,7 @@ module.exports = (sequelize)=>{ // 接收一个数据库对象参数
         },
         portrait:{
             type:DataTypes.STRING,
+            defaultValue:`http://${config.host}/图廊/data/user/001.png`,
             allowNull:false,
             comment:'头像'
         },

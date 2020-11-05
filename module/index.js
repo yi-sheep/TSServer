@@ -30,52 +30,52 @@ Object.keys(db).forEach(e => {
     }
 });
 sequelize.sync();
-(async () => {
-    await sequelize.sync({force:true}); // 同步数据库
+// (async () => {
+//     await sequelize.sync({force:true}); // 同步数据库
 
-    // 创建一条用户账户数据
-    let user1 = await db.User.create({
-        account: "123456",
-        password: "123456"
-    });
-    // 创建一条空的用户信息数据
-    let userinfo1 = await db.UserInformation.create({
-        name:user1.account,
-        portrait:`http://${config.server.host}/图廊/data/user/001.png`
-    });
-    // 创建一条空的用户关系数据
-    let userrelat1 = await db.UserRelationship.create({});
-    userinfo1.setUser(user1); // 设置外键的值为账户数据的id
-    userrelat1.setUser(user1); // 设置外键的值为账户数据的id
+//     // 创建一条用户账户数据
+//     let user1 = await db.User.create({
+//         account: "123456",
+//         password: "123456"
+//     });
+//     // 创建一条空的用户信息数据
+//     let userinfo1 = await db.UserInformation.create({
+//         name:user1.account,
+//         portrait:`http://${config.server.host}/图廊/data/user/001.png`
+//     });
+//     // 创建一条空的用户关系数据
+//     let userrelat1 = await db.UserRelationship.create({});
+//     userinfo1.setUser(user1); // 设置外键的值为账户数据的id
+//     userrelat1.setUser(user1); // 设置外键的值为账户数据的id
 
-    // 创建一条用户账户数据
-    let user2 = await db.User.create({
-        account: "654789",
-        password: "123456"
-    });
-    // 创建一条空的用户信息数据
-    let userinfo2 = await db.UserInformation.create({
-        name:user2.account,
-        portrait:`http://${config.server.host}/图廊/data/user/001.png`
-    });
-    // 创建一条空的用户关系数据
-    let userrelat2 = await db.UserRelationship.create({});
-    userinfo2.setUser(user2); // 设置外键的值为账户数据的id
-    userrelat2.setUser(user2); // 设置外键的值为账户数据的id
+//     // 创建一条用户账户数据
+//     let user2 = await db.User.create({
+//         account: "654789",
+//         password: "123456"
+//     });
+//     // 创建一条空的用户信息数据
+//     let userinfo2 = await db.UserInformation.create({
+//         name:user2.account,
+//         portrait:`http://${config.server.host}/图廊/data/user/001.png`
+//     });
+//     // 创建一条空的用户关系数据
+//     let userrelat2 = await db.UserRelationship.create({});
+//     userinfo2.setUser(user2); // 设置外键的值为账户数据的id
+//     userrelat2.setUser(user2); // 设置外键的值为账户数据的id
 
-    // 创建一条用户账户数据
-    let user3 = await db.User.create({
-        account: "789123",
-        password: "123456"
-    });
-    // 创建一条空的用户信息数据
-    let userinfo3 = await db.UserInformation.create({
-        name:user3.account,
-        portrait:`http://${config.server.host}/图廊/data/user/001.png`
-    });
-    // 创建一条空的用户关系数据
-    let userrelat3 = await db.UserRelationship.create({});
-    userinfo3.setUser(user3); // 设置外键的值为账户数据的id
-    userrelat3.setUser(user3); // 设置外键的值为账户数据的id
-})();
+//     // 创建一条用户账户数据
+//     let user3 = await db.User.create({
+//         account: "789123",
+//         password: "123456"
+//     });
+//     // 创建一条空的用户信息数据
+//     let userinfo3 = await db.UserInformation.create({
+//         name:user3.account,
+//         portrait:`http://${config.server.host}/图廊/data/user/001.png`
+//     });
+//     // 创建一条空的用户关系数据
+//     let userrelat3 = await db.UserRelationship.create({});
+//     userinfo3.setUser(user3); // 设置外键的值为账户数据的id
+//     userrelat3.setUser(user3); // 设置外键的值为账户数据的id
+// })();
 module.exports = db; // 导出所有的数据库模块
